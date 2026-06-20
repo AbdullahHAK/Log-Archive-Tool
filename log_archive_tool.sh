@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Erorr: Please provide a log directory path"
+    echo "Usage: ./log_archive_tool.sh <log-directory>"
+    exit 1
+fi
+
+LOG_DIR=$1
+
+echo "Target Folder to archive: $LOG_DIR"

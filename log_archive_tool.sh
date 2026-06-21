@@ -21,3 +21,14 @@ echo $TIMESTAMP
 ARCHIVE_DIR="archives"
 
 mkdir -p "$ARCHIVE_DIR"
+
+ARCHIVE_NAME="logs_archive_${TIMESTAMP}.tar.gz"
+echo $ARCHIVE_NAME
+tar -czf "$ARCHIVE_DIR/$ARCHIVE_NAME" "$LOG_DIR"
+
+if [ $? -eq 0 ]; then
+    echo "Archive created successfully"
+else
+    echo "Archive creation failed"
+    exit 1
+fi

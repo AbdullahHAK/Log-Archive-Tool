@@ -9,3 +9,11 @@ fi
 LOG_DIR=$1
 
 echo "Target Folder to archive: $LOG_DIR"
+
+if [ ! -d "$LOG_DIR" ]; then
+    echo "Error: Directory does not exist"
+    exit 1
+fi
+
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+echo $TIMESTAMP

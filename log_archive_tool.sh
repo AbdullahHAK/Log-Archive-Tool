@@ -17,3 +17,7 @@ fi
 
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 echo $TIMESTAMP
+
+ARCHIVE_DIR="archives"
+
+mkdir -p "$ARCHIVE_DIR"

@@ -32,3 +32,5 @@ else
     echo "Archive creation failed"
     exit 1
 fi
+
+echo "$(date) - $ARCHIVE_NAME created from $LOG_DIR" >> archive_history.log
